@@ -16,7 +16,7 @@ export default function SiteFooter() {
         </div>
         <div>
           <h2>Info</h2>
-          <Link href="/legale">Legale</Link><Link href="/faq">FAQ</Link><Link href="/news">News</Link>
+          <Link href="/legale">Legale</Link><Link href="/faq">FAQ</Link>
         </div>
         <div className="footer-social">
           <h2>Contatti</h2>
