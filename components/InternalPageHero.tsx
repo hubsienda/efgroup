@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./InternalPages.module.css";
 
 type InternalPageHeroProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   intro: string;
 };
@@ -12,7 +12,7 @@ export default function InternalPageHero({ eyebrow, title, intro }: InternalPage
     <section className={styles.hero}>
       <div className={`shell ${styles.heroInner}`}>
         <div className={styles.heroCopy}>
-          <p className="eyebrow">{eyebrow}</p>
+          {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
           <h1>{title}</h1>
           <p>{intro}</p>
         </div>
