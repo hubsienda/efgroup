@@ -30,6 +30,7 @@ export default function Page() {
               href="https://photos.app.goo.gl/HpiPjVJgggHAqBEr9"
               target="_blank"
               rel="noreferrer"
+              aria-label="Scopri i nostri prodotti — si apre in una nuova scheda"
               className={`${styles.action} ${styles.actionPrimary}`}
             >
               Scopri i nostri prodotti
