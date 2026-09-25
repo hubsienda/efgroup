@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
+  ["Home", "/"],
   ["Chi siamo", "/chi-siamo"],
   ["Prodotti", "/prodotti"],
   ["Team", "/team"],
