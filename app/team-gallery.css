@@ -1,0 +1,134 @@
+/* Team-only corrections: natural-size portraits and shared gallery controls. */
+
+.team-portrait-media,
+.team-group-media {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.team-portrait-media > img,
+.team-group-media > img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.team-group-media {
+  width: min(100%, 1040px);
+}
+
+.image-lightbox-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  padding: 28px 72px 64px;
+  cursor: zoom-out;
+}
+
+.image-lightbox-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.image-lightbox-nav {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .66);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.image-lightbox-prev {
+  left: 16px;
+}
+
+.image-lightbox-next {
+  right: 16px;
+}
+
+.image-lightbox-nav:focus-visible {
+  outline: 3px solid var(--brand-yellow);
+  outline-offset: 3px;
+}
+
+.image-lightbox-caption {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: calc(100% - 150px);
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .66);
+  color: #fff;
+  font-size: .74rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .team-portrait-media,
+  .team-group-media {
+    width: 100%;
+  }
+
+  .image-lightbox-stage {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    padding: 58px 42px 76px;
+  }
+
+  .image-lightbox-nav {
+    width: 48px;
+    height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .image-lightbox-prev {
+    left: 8px;
+  }
+
+  .image-lightbox-next {
+    right: 8px;
+  }
+
+  .image-lightbox-caption {
+    bottom: 12px;
+    max-width: calc(100% - 112px);
+    font-size: .68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-portrait-media > img,
+  .team-group-media > img,
+  .image-lightbox-nav {
+    transition: none;
+  }
+}
