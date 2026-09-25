@@ -53,7 +53,6 @@ export default function Page() {
                 gallery={gallery}
                 initialIndex={index}
                 className="team-portrait-media"
-                sizes="(max-width: 700px) calc(100vw - 28px), (max-width: 980px) 33vw, 30vw"
               />
               <h3>{person.name}</h3>
             </article>
@@ -68,7 +67,6 @@ export default function Page() {
             gallery={gallery}
             initialIndex={3}
             className="team-group-media"
-            sizes="(max-width: 700px) calc(100vw - 28px), 1040px"
           />
         </div>
       </section>
