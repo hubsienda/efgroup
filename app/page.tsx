@@ -50,7 +50,7 @@ export default function Home() {
 
       <section className="team-feature section shell">
         <div className="team-image"><Image src="/team/team.jpg" alt="Il team di Erra & Ferrini Group" fill sizes="(max-width: 800px) 100vw, 60vw" /></div>
-        <div className="team-copy"><p className="eyebrow">Il Group</p><h2>Persone, esperienza, mercato.</h2><p>Una realtà costruita ogni giorno da persone che conoscono il prodotto, i mercati e il valore delle relazioni commerciali.</p><Link href="/team" className="text-link">Conosci il team <span>→</span></Link></div>
+        <div className="team-copy"><h2>Persone, esperienza, mercato.</h2><p>Una realtà costruita ogni giorno da persone che conoscono il prodotto, i mercati e il valore delle relazioni commerciali.</p><Link href="/team" className="text-link">Conosci il team <span>→</span></Link></div>
       </section>
 
       <section className="news section shell">
