@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import InternalPageHero from "@/components/InternalPageHero";
+import ImageLightbox from "@/components/ImageLightbox";
 import styles from "@/components/InternalPages.module.css";
 
 export const metadata: Metadata = {
@@ -18,7 +18,6 @@ export default function Page() {
   return (
     <>
       <InternalPageHero
-        eyebrow="Il Group"
         title="Team"
         intro="Import & Export di Prodotti Ortofrutticoli d’Eccellenza"
       />
@@ -45,14 +44,12 @@ export default function Page() {
         <div className={`shell ${styles.portraits}`}>
           {people.map((person) => (
             <article key={person.name} className={styles.portrait}>
-              <div className={styles.portraitMedia}>
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  fill
-                  sizes="(max-width: 700px) 100vw, (max-width: 980px) 33vw, 30vw"
-                />
-              </div>
+              <ImageLightbox
+                src={person.image}
+                alt={person.name}
+                className={styles.portraitMedia}
+                sizes="(max-width: 700px) 100vw, (max-width: 980px) 33vw, 30vw"
+              />
               <h3>{person.name}</h3>
             </article>
           ))}
@@ -61,16 +58,13 @@ export default function Page() {
 
       <section className={`${styles.section} ${styles.groupSection}`}>
         <div className="shell">
-          <p className="eyebrow">Le persone</p>
           <h2>I Ragazzi del Nostro Team</h2>
-          <div className={styles.groupImage}>
-            <Image
-              src="/team/team.jpg"
-              alt="I ragazzi del team Erra & Ferrini Group"
-              fill
-              sizes="(max-width: 700px) 100vw, 1040px"
-            />
-          </div>
+          <ImageLightbox
+            src="/team/team.jpg"
+            alt="I ragazzi del team Erra & Ferrini Group"
+            className={styles.groupImage}
+            sizes="(max-width: 700px) 100vw, 1040px"
+          />
         </div>
       </section>
     </>
