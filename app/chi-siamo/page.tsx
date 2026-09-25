@@ -34,10 +34,10 @@ export default function Page() {
           </div>
         </div>
 
-        <div className={`shell ${styles.channels}`} aria-label="Canali della distribuzione">
-          <div className={styles.channel}><span>GDO</span></div>
-          <div className={styles.channel}><span>HO.RE.CA.</span></div>
-          <div className={styles.channel}><span>DETTAGLIO</span></div>
+        <div className="shell about-channel-cards" aria-label="Canali della distribuzione">
+          <div className="about-channel-card about-channel-card--gdo"><span>GDO</span></div>
+          <div className="about-channel-card about-channel-card--horeca"><span>HO.RE.CA.</span></div>
+          <div className="about-channel-card about-channel-card--retail"><span>DETTAGLIO</span></div>
         </div>
       </section>
     </>
