@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 type GalleryImage = {
@@ -12,10 +12,9 @@ type ImageLightboxProps = {
   gallery: GalleryImage[];
   initialIndex: number;
   className: string;
-  sizes: string;
 };
 
-export default function ImageLightbox({ gallery, initialIndex, className, sizes }: ImageLightboxProps) {
+export default function ImageLightbox({ gallery, initialIndex, className }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -57,7 +56,7 @@ export default function ImageLightbox({ gallery, initialIndex, className, sizes 
         onClick={() => openAt(initialIndex)}
         aria-label={`Ingrandisci ${triggerImage.alt}`}
       >
-        <Image src={triggerImage.src} alt={triggerImage.alt} fill sizes={sizes} />
+        <img src={triggerImage.src} alt={triggerImage.alt} />
         <span className="image-lightbox-hint" aria-hidden="true">Ingrandisci</span>
       </button>
 
@@ -89,8 +88,13 @@ export default function ImageLightbox({ gallery, initialIndex, className, sizes 
         <button type="button" className="image-lightbox-nav image-lightbox-prev" onClick={previous} aria-label="Foto precedente">
           ‹
         </button>
-        <div className="image-lightbox-stage">
-          <Image src={activeImage.src} alt={activeImage.alt} fill sizes="95vw" priority={false} />
+        <div className="image-lightbox-stage" onClick={close}>
+          <img
+            src={activeImage.src}
+            alt={activeImage.alt}
+            className="image-lightbox-image"
+            onClick={(event) => event.stopPropagation()}
+          />
         </div>
         <button type="button" className="image-lightbox-nav image-lightbox-next" onClick={next} aria-label="Foto successiva">
           ›
