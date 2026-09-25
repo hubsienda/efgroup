@@ -36,7 +36,7 @@ export default function Home() {
             ["HO.RE.CA.", "Hotellerie, ristorazione e catering"],
             ["DETTAGLIO", "Specialisti e commercio al dettaglio"],
             ["GOURMET", "Selezioni dedicate all’alta qualità"],
-          ].map(([name, desc], i) => <div className="channel-row" key={name}><span>0{i + 1}</span><strong>{name}</strong><p>{desc}</p></div>)}
+          ].map(([name, desc]) => <div className="channel-row" key={name}><strong>{name}</strong><p>{desc}</p></div>)}
         </div>
       </section>
 
@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       <section className="team-feature section shell">
-        <div className="team-image"><Image src="/team/team.jpg" alt="Il team di Erra & Ferrini Group" fill sizes="(max-width: 800px) 100vw, 55vw" /></div>
+        <div className="team-image"><Image src="/team/team.jpg" alt="Il team di Erra & Ferrini Group" fill sizes="(max-width: 800px) 100vw, 60vw" /></div>
         <div className="team-copy"><p className="eyebrow">Il Group</p><h2>Persone, esperienza, mercato.</h2><p>Una realtà costruita ogni giorno da persone che conoscono il prodotto, i mercati e il valore delle relazioni commerciali.</p><Link href="/team" className="text-link">Conosci il team <span>→</span></Link></div>
       </section>
 
@@ -63,7 +63,7 @@ export default function Home() {
 
       <section className="contact-band">
         <div className="shell contact-inner">
-          <div><p className="eyebrow">Parliamo di mercato</p><h2>La qualità comincia da una buona conversazione.</h2></div>
+          <div><p className="eyebrow">CONTATTI COMMERCIALI</p><h2>Prodotti, disponibilità, ordini e consegne. Parliamone.</h2></div>
           <div className="contact-actions"><a href="https://wa.me/393319480051" target="_blank" rel="noreferrer" className="button primary">WhatsApp commerciale</a><Link href="/contatti" className="button secondary">Contatti</Link></div>
         </div>
       </section>
