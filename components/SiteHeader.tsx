@@ -5,7 +5,6 @@ const nav = [
   ["Chi siamo", "/chi-siamo"],
   ["Prodotti", "/prodotti"],
   ["Team", "/team"],
-  ["News", "/news"],
   ["FAQ", "/faq"],
   ["Contatti", "/contatti"],
 ];
