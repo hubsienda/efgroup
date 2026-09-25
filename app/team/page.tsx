@@ -47,7 +47,7 @@ export default function Page() {
               <ImageLightbox
                 src={person.image}
                 alt={person.name}
-                className={styles.portraitMedia}
+                className="team-portrait-media"
                 sizes="(max-width: 700px) 100vw, (max-width: 980px) 33vw, 30vw"
               />
               <h3>{person.name}</h3>
@@ -62,7 +62,7 @@ export default function Page() {
           <ImageLightbox
             src="/team/team.jpg"
             alt="I ragazzi del team Erra & Ferrini Group"
-            className={styles.groupImage}
+            className="team-group-media"
             sizes="(max-width: 700px) 100vw, 1040px"
           />
         </div>
