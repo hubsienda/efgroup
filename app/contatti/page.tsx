@@ -44,6 +44,7 @@ export default function Page() {
                 href="https://www.facebook.com/Ferrini-Maestri-Dellortofrutta-in-Roma-1031985723520499/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Facebook Erra & Ferrini Group — si apre in una nuova scheda"
                 className={styles.action}
               >
                 Facebook
@@ -52,6 +53,7 @@ export default function Page() {
                 href="https://www.instagram.com/erraferrinigroup/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram Erra & Ferrini Group — si apre in una nuova scheda"
                 className={styles.action}
               >
                 Instagram
@@ -60,6 +62,7 @@ export default function Page() {
                 href="https://wa.me/393319480051"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="WhatsApp Commerciale — si apre in una nuova scheda"
                 className={`${styles.action} ${styles.whatsapp}`}
               >
                 WhatsApp Commerciale
@@ -107,6 +110,7 @@ export default function Page() {
             href={mapsHref}
             target="_blank"
             rel="noreferrer"
+            aria-label="Trovaci su Google Maps — si apre in una nuova scheda"
             className={`${styles.action} ${styles.actionPrimary}`}
           >
             Trovaci su Google Maps
