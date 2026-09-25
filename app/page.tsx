@@ -59,7 +59,6 @@ export default function Home() {
           <article><div className="news-image"><Image src="/picnews/rai1.jpg" alt="RAI presso Erra & Ferrini Group" fill sizes="(max-width: 700px) 100vw, 45vw" /></div><p className="eyebrow">In evidenza</p><h3>RAI presso Erra &amp; Ferrini Group</h3></article>
           <article><div className="news-image"><Image src="/picnews/zespri1.jpg" alt="Manifestazione Kiwi Zespri" fill sizes="(max-width: 700px) 100vw, 45vw" /></div><p className="eyebrow">In evidenza</p><h3>Manifestazione Kiwi Zespri</h3></article>
         </div>
-        <Link href="/news" className="text-link">Tutte le news <span>→</span></Link>
       </section>
 
       <section className="contact-band">
