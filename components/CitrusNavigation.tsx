@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./CitrusNavigation.module.css";
 
 const items = [
   {
@@ -52,9 +53,9 @@ const items = [
 export default function CitrusNavigation() {
   return (
     <>
-      <nav className="citrus-wheel" aria-label="Navigazione principale della homepage">
+      <nav className={styles.wheel} aria-label="Navigazione principale della homepage">
         <svg
-          className="citrus-svg"
+          className={styles.svg}
           viewBox="0 0 100 100"
           role="img"
           aria-label="Navigazione principale: cinque sezioni"
@@ -63,12 +64,12 @@ export default function CitrusNavigation() {
             <a
               key={item.href}
               href={item.href}
-              className="citrus-sector-link"
+              className={styles.sectorLink}
               aria-label={item.label}
             >
-              <path className="citrus-sector" d={item.path} fill={item.colour} />
+              <path className={styles.sector} d={item.path} fill={item.colour} />
               <text
-                className="citrus-sector-label"
+                className={styles.label}
                 x={item.labelX}
                 y={item.labelY}
                 fill={item.textColour}
@@ -81,7 +82,7 @@ export default function CitrusNavigation() {
             </a>
           ))}
         </svg>
-        <Link href="/" className="citrus-centre" aria-label="Home">
+        <Link href="/" className={styles.centre} aria-label="Home">
           <Image src="/logo/logo.png" alt="" width={170} height={170} priority />
         </Link>
       </nav>
