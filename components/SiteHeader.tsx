@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "@/components/MobileMenu";
 
 const nav = [
   ["Home", "/"],
@@ -22,14 +23,7 @@ export default function SiteHeader() {
             <Link key={href} href={href}>{label}</Link>
           ))}
         </nav>
-        <details className="mobile-menu">
-          <summary aria-label="Apri il menu">Menu</summary>
-          <nav aria-label="Navigazione mobile">
-            {nav.map(([label, href]) => (
-              <Link key={href} href={href}>{label}</Link>
-            ))}
-          </nav>
-        </details>
+        <MobileMenu />
       </div>
     </header>
   );
