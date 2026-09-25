@@ -15,19 +15,16 @@ const nav = [
 
 export default function MobileMenu() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [openPath, setOpenPath] = useState<string | null>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const open = openPath === pathname;
 
   useEffect(() => {
     if (!open) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setOpen(false);
+        setOpenPath(null);
         buttonRef.current?.focus();
       }
     };
@@ -44,14 +41,14 @@ export default function MobileMenu() {
         className="mobile-menu-toggle"
         aria-expanded={open}
         aria-controls="mobile-navigation"
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => setOpenPath((value) => value === pathname ? null : pathname)}
       >
         Menu
       </button>
       {open && (
         <nav id="mobile-navigation" aria-label="Navigazione mobile" className="mobile-menu-panel">
           {nav.map(([label, href]) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)}>
+            <Link key={href} href={href} onClick={() => setOpenPath(null)}>
               {label}
             </Link>
           ))}
