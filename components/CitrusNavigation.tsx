@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const items = [
-  { label: "CHI SIAMO", href: "/chi-siamo", colour: "#d96c22" },
-  { label: "PRODOTTI", href: "/prodotti", colour: "#e6ad1a" },
-  { label: "TEAM", href: "/team", colour: "#54873b" },
-  { label: "NEWS", href: "/news", colour: "#b84b3d" },
-  { label: "FAQ", href: "/faq", colour: "#83a936" },
-  { label: "CONTATTI", href: "/contatti", colour: "#75506f" },
+  { label: "CHI SIAMO", href: "/chi-siamo", colour: "var(--brand-orange)", textColour: "#ffffff" },
+  { label: "PRODOTTI", href: "/prodotti", colour: "var(--brand-yellow)", textColour: "var(--text-primary)" },
+  { label: "TEAM", href: "/team", colour: "var(--brand-green)", textColour: "#ffffff" },
+  { label: "NEWS", href: "/news", colour: "var(--brand-dark-yellow)", textColour: "var(--text-primary)" },
+  { label: "FAQ", href: "/faq", colour: "#c84208", textColour: "#ffffff" },
+  { label: "CONTATTI", href: "/contatti", colour: "#0d7423", textColour: "#ffffff" },
 ];
 
 export default function CitrusNavigation() {
@@ -19,7 +19,11 @@ export default function CitrusNavigation() {
             key={item.href}
             href={item.href}
             className="citrus-wedge"
-            style={{ "--i": index, "--wedge": item.colour } as React.CSSProperties}
+            style={{
+              "--i": index,
+              "--wedge": item.colour,
+              "--wedge-text": item.textColour,
+            } as React.CSSProperties}
           >
             <span>{item.label}</span>
           </Link>
@@ -30,7 +34,14 @@ export default function CitrusNavigation() {
       </nav>
       <nav className="citrus-mobile" aria-label="Navigazione principale della homepage">
         {items.map((item) => (
-          <Link key={item.href} href={item.href} style={{ "--wedge": item.colour } as React.CSSProperties}>
+          <Link
+            key={item.href}
+            href={item.href}
+            style={{
+              "--wedge": item.colour,
+              "--wedge-text": item.textColour,
+            } as React.CSSProperties}
+          >
             <span>{item.label}</span><span aria-hidden="true">↗</span>
           </Link>
         ))}
