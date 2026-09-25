@@ -14,6 +14,11 @@ const people = [
   { name: "Vittorio Pompei", image: "/team/Vittorio-Pompei.jpg" },
 ];
 
+const gallery = [
+  ...people.map((person) => ({ src: person.image, alt: person.name })),
+  { src: "/team/team.jpg", alt: "I ragazzi del team Erra & Ferrini Group" },
+];
+
 export default function Page() {
   return (
     <>
@@ -42,13 +47,13 @@ export default function Page() {
         </div>
 
         <div className={`shell ${styles.portraits}`}>
-          {people.map((person) => (
+          {people.map((person, index) => (
             <article key={person.name} className={styles.portrait}>
               <ImageLightbox
-                src={person.image}
-                alt={person.name}
+                gallery={gallery}
+                initialIndex={index}
                 className="team-portrait-media"
-                sizes="(max-width: 700px) 100vw, (max-width: 980px) 33vw, 30vw"
+                sizes="(max-width: 700px) calc(100vw - 28px), (max-width: 980px) 33vw, 30vw"
               />
               <h3>{person.name}</h3>
             </article>
@@ -60,10 +65,10 @@ export default function Page() {
         <div className="shell">
           <h2>I Ragazzi del Nostro Team</h2>
           <ImageLightbox
-            src="/team/team.jpg"
-            alt="I ragazzi del team Erra & Ferrini Group"
+            gallery={gallery}
+            initialIndex={3}
             className="team-group-media"
-            sizes="(max-width: 700px) 100vw, 1040px"
+            sizes="(max-width: 700px) calc(100vw - 28px), 1040px"
           />
         </div>
       </section>
