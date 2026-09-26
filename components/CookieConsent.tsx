@@ -97,7 +97,7 @@ export default function CookieConsent() {
   const [draft, setDraft] = useState<ConsentState>(() => createState());
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const bannerOpen = OPTIONAL_CATEGORIES_PRESENT && !storedConsent && !preferencesOpen;
+  const bannerOpen = !storedConsent && !preferencesOpen;
 
   useEffect(() => {
     const openPreferences = () => {
