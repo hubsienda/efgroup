@@ -12,9 +12,17 @@ type ImageLightboxProps = {
   gallery: GalleryImage[];
   initialIndex: number;
   className: string;
+  downloadable?: boolean;
+  downloadFilename?: string;
 };
 
-export default function ImageLightbox({ gallery, initialIndex, className }: ImageLightboxProps) {
+export default function ImageLightbox({
+  gallery,
+  initialIndex,
+  className,
+  downloadable = false,
+  downloadFilename,
+}: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(initialIndex);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -110,6 +118,16 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
             <span>{activeImage.alt}</span>
             <span>{activeIndex + 1} / {gallery.length}</span>
           </div>
+        )}
+        {downloadable && (
+          <a
+            href={activeImage.src}
+            download={downloadFilename || ""}
+            className="image-lightbox-download"
+            aria-label={`Scarica ${activeImage.alt}`}
+          >
+            <span aria-hidden="true">↓</span> SCARICA
+          </a>
         )}
       </dialog>
     </>

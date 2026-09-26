@@ -21,9 +21,18 @@ function InstagramIcon() {
 
 function WhatsAppIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.5Z" />
-      <path d="M9 8.2c.4 2.5 2.3 4.5 4.8 5.1l1.4-1.4 2 .7c-.4 1.9-1.6 2.8-3.3 2.6-3.7-.5-6.7-3.5-7.2-7.2-.2-1.7.7-2.9 2.6-3.3l.7 2L9 8.2Z" />
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none">
+      <path
+        d="M20.2 11.9a8.2 8.2 0 0 1-12.1 7.2L4 20.3l1.3-4A8.2 8.2 0 1 1 20.2 11.9Z"
+        stroke="currentColor"
+        strokeWidth="1.65"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.8 8.2c.2-.45.45-.48.72-.48h.39c.15 0 .3.03.41.28l.78 1.83c.09.21.08.37-.05.54l-.58.73c-.13.16-.13.31-.03.49.53.93 1.32 1.72 2.28 2.27.18.1.32.1.48-.04l.76-.84c.16-.18.34-.21.55-.12l1.77.84c.21.1.3.24.27.46-.12.81-.55 1.48-1.2 1.86-.51.29-1.17.36-1.87.17-1.14-.32-2.57-1.2-3.71-2.34-1.15-1.15-1.99-2.56-2.31-3.7-.19-.66-.09-1.31.2-1.81Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

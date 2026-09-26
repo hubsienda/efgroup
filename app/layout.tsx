@@ -4,6 +4,7 @@ import "./globals.css";
 import "./refinements.css";
 import "./team-gallery.css";
 import "./event-footer.css";
+import "./madrid-lightbox-fix.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 

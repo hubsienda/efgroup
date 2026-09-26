@@ -37,7 +37,13 @@ export default function Home() {
             <p className="madrid-event-callout">Passaci a trovare!</p>
           </div>
           <div className="madrid-event-banner">
-            <ImageLightbox gallery={madridGallery} initialIndex={0} className="madrid-banner-media" />
+            <ImageLightbox
+              gallery={madridGallery}
+              initialIndex={0}
+              className="madrid-banner-media"
+              downloadable
+              downloadFilename="Erra-Ferrini-Fruit-Attraction-Madrid-2026.jpg"
+            />
           </div>
         </div>
       </section>
