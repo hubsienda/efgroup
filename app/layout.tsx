@@ -4,8 +4,10 @@ import "./globals.css";
 import "./refinements.css";
 import "./team-gallery.css";
 import "./event-footer.css";
+import "./cookie-consent.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import CookieConsent from "@/components/CookieConsent";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,6 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <CookieConsent />
       </body>
     </html>
   );

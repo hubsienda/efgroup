@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ManageCookiesButton from "@/components/ManageCookiesButton";
 
 function FacebookIcon() {
   return (
@@ -64,6 +65,8 @@ export default function SiteFooter() {
         <div>
           <h2>INFO</h2>
           <Link href="/legal">LEGALE</Link>
+          <Link href="/legal/cookie-policy">COOKIE POLICY</Link>
+          <ManageCookiesButton />
           <Link href="/faq">FAQ</Link>
           <a href="https://intranet.erraferrini.group" target="_blank" rel="noreferrer">INTRANET</a>
         </div>

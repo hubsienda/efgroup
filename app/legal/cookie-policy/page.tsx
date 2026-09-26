@@ -1,126 +1,215 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LegalNav from "@/components/LegalNav";
 import InternalPageHero from "@/components/InternalPageHero";
 import styles from "@/components/LegalPages.module.css";
 
 export const metadata: Metadata = {
   title: "Cookie Policy",
-  description: "Cookie Policy di Erra & Ferrini Group: cookie tecnici, analitici, di terze parti e modalità di gestione delle preferenze.",
+  description: "Cookie Policy di Erra & Ferrini Group: cookie tecnici, gestione del consenso e modalità di controllo delle preferenze.",
 };
 
 export default function Page() {
   return (
     <>
       <InternalPageHero
-        eyebrow="Legal"
+        eyebrow="Legale"
         title="Cookie Policy"
         intro="Informazioni sui cookie utilizzati dal sito e sulle modalità di gestione delle preferenze."
       />
 
       <section className={styles.legalSection}>
         <div className={styles.legalShell}>
-          <p className={styles.updated}>Documento aggiornato al 25/09/2026</p>
+          <p className={styles.updated}>Ultimo aggiornamento: 26/09/2026</p>
           <LegalNav />
 
           <nav className={styles.toc} aria-label="Indice Cookie Policy">
             <h2>In questa pagina</h2>
             <ul>
               <li><a href="#cosa-sono">Cosa sono i cookie</a></li>
-              <li><a href="#cookie-sito">Cookie del gestore del sito</a></li>
-              <li><a href="#terze-parti">Cookie di parti terze</a></li>
-              <li><a href="#social">Social plugin</a></li>
-              <li><a href="#browser">Opzioni del browser</a></li>
-              <li><a href="#come-utilizziamo">Come e quali cookie utilizziamo</a></li>
+              <li><a href="#cookie-utilizzati">Cookie utilizzati dal Sito</a></li>
+              <li><a href="#analitici">Cookie analitici</a></li>
+              <li><a href="#profilazione">Cookie di profilazione e marketing</a></li>
+              <li><a href="#consenso">Gestione del consenso</a></li>
+              <li><a href="#revoca">Modifica o revoca del consenso</a></li>
+              <li><a href="#terze-parti">Cookie e servizi di terze parti</a></li>
+              <li><a href="#social">Social network e collegamenti esterni</a></li>
+              <li><a href="#google-fonts">Google Fonts</a></li>
+              <li><a href="#elenco-cookie">Come e quali cookie utilizziamo</a></li>
+              <li><a href="#installazione">Installazione e disinstallazione dei cookie</a></li>
               <li><a href="#controllo">Come controllare i cookie</a></li>
+              <li><a href="#privacy">Privacy e trattamento dei dati personali</a></li>
+              <li><a href="#aggiornamenti">Aggiornamenti della Cookie Policy</a></li>
+              <li><a href="#specificazioni">Specificazioni</a></li>
             </ul>
           </nav>
 
           <article className={styles.article}>
             <section id="cosa-sono">
               <h2>Cosa sono i cookie</h2>
-              <p>Il nostro sito web (“Sito”) utilizza i cookie per rendere i propri servizi semplici ed efficienti per l’utenza che ne visiona le pagine. Gli utenti che accedono al Sito vedranno inserite delle quantità minime di informazioni nei dispositivi in uso, che siano computer o periferiche mobili, in piccoli file di testo denominati “cookie” salvati nelle directory utilizzate dal browser web dell’utente. Vi sono vari tipi di cookie, alcuni per rendere più efficace l’uso del sito, altri per abilitare determinate funzionalità. Il gestore del sito è lo stesso titolare del trattamento.</p>
+              <p>I cookie sono piccoli file di testo che i siti web possono memorizzare sul dispositivo dell&apos;utente durante la navigazione.</p>
+              <p>I cookie possono essere utilizzati per diverse finalità, ad esempio per consentire il corretto funzionamento di un sito, memorizzare determinate preferenze dell&apos;utente oppure, quando previsto e consentito dall&apos;utente, raccogliere informazioni statistiche sull&apos;utilizzo del sito.</p>
+              <p>Il presente sito web (“Sito”) utilizza esclusivamente i cookie e gli strumenti strettamente necessari al proprio funzionamento, salvo eventuali ulteriori categorie espressamente autorizzate dall&apos;utente attraverso il sistema di gestione del consenso.</p>
+              <p>Il gestore del Sito coincide con il Titolare del trattamento indicato nella relativa <strong>Privacy &amp; GDPR Policy</strong>.</p>
             </section>
 
-            <section id="cookie-sito">
-              <h2>Cookie del gestore del Sito</h2>
+            <section id="cookie-utilizzati">
+              <h2>Cookie utilizzati dal Sito</h2>
 
-              <h3>Cookie tecnici</h3>
-              <p>Il Sito utilizza esclusivamente cookie “tecnici”, quali i cookie di navigazione o sessione, quelli di funzionalità e quelli analitici.</p>
+              <h3>Cookie tecnici strettamente necessari</h3>
+              <p>Il Sito può utilizzare cookie tecnici strettamente necessari per garantire la normale navigazione, la sicurezza, il corretto funzionamento delle pagine e la gestione delle preferenze espresse dall&apos;utente.</p>
+              <p>L&apos;utilizzo di tali cookie non richiede il consenso preventivo dell&apos;utente, in quanto necessario per fornire il servizio richiesto e consentire il corretto funzionamento del Sito.</p>
+              <p>Tra i cookie tecnici rientra il cookie utilizzato per memorizzare la scelta dell&apos;utente in materia di cookie e strumenti di tracciamento.</p>
 
-              <h3>Cookie di navigazione o sessione</h3>
-              <p>Specificatamente, possono essere utilizzati cookie di navigazione o sessione, diretti a garantire la normale navigazione e fruizione del sito web, e quindi finalizzati a rendere funzionale ed ottimizzata la navigazione all’interno del sito.</p>
+              <h3>Cookie per la gestione del consenso</h3>
+              <p>Il Sito utilizza un cookie tecnico di prima parte per ricordare le preferenze espresse attraverso il sistema di gestione dei cookie.</p>
+              <p>Il cookie di consenso:</p>
+              <ul>
+                <li>non viene utilizzato per finalità pubblicitarie o di profilazione;</li>
+                <li>non consente di tracciare la navigazione dell&apos;utente per finalità commerciali;</li>
+                <li>serve esclusivamente a memorizzare la scelta effettuata dall&apos;utente;</li>
+                <li>può registrare se l&apos;utente ha accettato, rifiutato o configurato determinate categorie di cookie;</li>
+                <li>viene conservato per un periodo massimo di circa sei mesi, salvo revoca della scelta o necessità di richiedere nuovamente il consenso a seguito di modifiche sostanziali.</li>
+              </ul>
+              <p>Il nome tecnico utilizzato dal sistema è:</p>
+              <p><strong><code>ef_cookie_consent</code></strong></p>
 
               <h3>Cookie di funzionalità</h3>
-              <p>Possono essere installati cookie di funzionalità, strettamente necessari per fornire servizi esplicitamente richiesti dall’utente.</p>
+              <p>Il Sito può utilizzare esclusivamente i cookie di funzionalità strettamente necessari per fornire servizi o funzionalità esplicitamente richiesti dall&apos;utente.</p>
+              <p>Qualora in futuro venissero introdotte funzionalità non strettamente necessarie che richiedano il consenso, esse resteranno disattivate fino alla scelta positiva dell&apos;utente.</p>
+            </section>
 
-              <h3>Cookie analitici</h3>
-              <p>Possono essere installati cookie analitici (c.d. analytics) utilizzati esclusivamente dal solo gestore del sito, per raccogliere informazioni in forma aggregata ed anonima, sul numero degli utenti e su come gli utenti visitano il sito. A seguito di accettazione da parte dell’utente si utilizzerà il servizio specifico “Google Analytics”: i dati acquisiti tramite Google Analytics potranno essere utilizzati anche da Google, secondo i termini di servizio predisposti dalla stessa (vedi sotto). Non sono presenti cookie di profilazione utilizzati dal gestore del Sito.</p>
+            <section id="analitici">
+              <h2>Cookie analitici</h2>
+              <p>Alla data dell&apos;ultimo aggiornamento della presente Cookie Policy, il Sito <strong>non utilizza Google Analytics né altri servizi di analisi basati su cookie o altri strumenti di tracciamento non necessari</strong>.</p>
+              <p>Pertanto, nessun cookie analitico viene attualmente installato dal Sito.</p>
+              <p>Qualora in futuro venisse introdotto un servizio di analisi che richieda il consenso dell&apos;utente, tale servizio verrà attivato esclusivamente dopo l&apos;espressione di un consenso valido attraverso il sistema di gestione delle preferenze e la presente Cookie Policy sarà aggiornata di conseguenza.</p>
+            </section>
+
+            <section id="profilazione">
+              <h2>Cookie di profilazione e marketing</h2>
+              <p>Il Sito non utilizza cookie di profilazione, cookie pubblicitari comportamentali o altri strumenti destinati alla profilazione dell&apos;utente per finalità commerciali o pubblicitarie.</p>
+              <p>Qualora tali strumenti venissero introdotti in futuro, non potranno essere attivati prima dell&apos;acquisizione del relativo consenso, ove richiesto dalla normativa applicabile.</p>
+            </section>
+
+            <section id="consenso">
+              <h2>Gestione del consenso</h2>
+              <p>Quando necessario in relazione ai cookie o agli strumenti utilizzati dal Sito, viene mostrato un sistema attraverso il quale l&apos;utente può esprimere le proprie preferenze.</p>
+              <p>L&apos;utente può:</p>
+              <ul>
+                <li><strong>ACCETTARE</strong> le categorie di cookie non necessari proposte;</li>
+                <li><strong>RIFIUTARE</strong> i cookie e gli strumenti non necessari;</li>
+                <li><strong>GESTIRE LE PREFERENZE</strong>, scegliendo singolarmente le categorie disponibili.</li>
+              </ul>
+              <p>In assenza di consenso vengono utilizzati esclusivamente i cookie tecnici strettamente necessari.</p>
+              <p>La semplice prosecuzione della navigazione, lo scorrimento della pagina, il tempo trascorso sul Sito o il clic su elementi che non abbiano la specifica funzione di esprimere il consenso <strong>non costituiscono consenso all&apos;utilizzo di cookie non necessari</strong>.</p>
+              <p>La chiusura del banner senza esprimere un consenso positivo mantiene le impostazioni predefinite e non comporta l&apos;attivazione di cookie o strumenti di tracciamento diversi da quelli tecnici strettamente necessari.</p>
+            </section>
+
+            <section id="revoca">
+              <h2>Modifica o revoca del consenso</h2>
+              <p>L&apos;utente può modificare o revocare in qualsiasi momento le preferenze precedentemente espresse.</p>
+              <p>A tale scopo è disponibile nel footer del Sito il collegamento:</p>
+              <p><strong>GESTISCI COOKIE</strong></p>
+              <p>attraverso il quale è possibile riaprire il pannello di gestione delle preferenze e modificare la propria scelta.</p>
+              <p>La revoca del consenso non pregiudica la liceità dei trattamenti eventualmente effettuati sulla base del consenso prima della sua revoca.</p>
             </section>
 
             <section id="terze-parti">
-              <h2>Cookie di parti terze</h2>
-
-              <h3>Cookie di analisi di servizi di terze parti</h3>
-              <p>Questi cookie sono utilizzati al fine di raccogliere informazioni sull’uso del sito da parte degli utenti in forma anonima quali: pagine visitate, tempo di permanenza, origini del traffico di provenienza, provenienza geografica, età, genere e interessi ai fini di campagne di marketing. Questi cookie sono inviati da domini di terze parti esterni al sito. Il sito utilizza il servizio “Google Analytics”.</p>
-
-              <h3>Google Analytics</h3>
-              <p>Google Analytics è un servizio di analisi web fornito da Google, che, attraverso l’uso di cookies (performance cookie), raccoglie dati di navigazione anonimi allo scopo di tracciare ed esaminare l’uso del sito, compilare report sulle attività del sito e fornire altri servizi relativi alle attività del sito, incluso il numero dei visitatori, e le pagine visitate. Google può anche trasferire queste informazioni a terzi ove ciò sia imposto dalla legge o laddove tali terzi trattini le suddette informazioni per conto di Google. Google non assocerà l’indirizzo IP a nessun altro dato posseduto da Google.</p>
-              <p>Utilizzando il presente sito web, l’utente acconsente al trattamento dei dati da parte di Google per le modalità e i fini sopraindicati. I dati trasmessi a Google sono depositati presso i server di Google negli Stati Uniti. Per ulteriori informazioni sull’uso dei dati e sul loro trattamento da parte di Google si raccomanda di prendere visione delle informazioni al seguente indirizzo internet: <a className={styles.externalLink} href="http://www.google.com/intl/it/policies/privacy/" target="_blank" rel="noreferrer">http://www.google.com/intl/it/policies/privacy/</a>.</p>
-              <p>Per rifiutare o eliminare questo tipo di cookie visitare il seguente link fornito da Google: <a className={styles.externalLink} href="https://support.google.com/accounts/answer/61416" target="_blank" rel="noreferrer">https://support.google.com/accounts/answer/61416</a></p>
-              <p>L’Utente può disabilitare in modo selettivo l’azione di Google Analytics installando sul proprio browser il componente di opt-out fornito da Google. Per disabilitare la raccolta di dati da parte di Google Analytics, visitare Google: <a className={styles.externalLink} href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">https://tools.google.com/dlpage/gaoptout</a></p>
-              <p>È precisato che Google aderisce alla conformità GDPR Reg. UE 2016/679.</p>
-
-              <h3>Cookie per integrare prodotti e funzioni di software di terze parti</h3>
-              <p>Questa tipologia di cookie integra funzionalità sviluppate da terzi all’interno delle pagine del sito come le icone e le preferenze espresse nei social network al fine di condivisione dei contenuti del sito o per l’uso di servizi software di terze parti (come i software per generare le mappe e ulteriori software che offrono servizi aggiuntivi). Questi cookie sono inviati da domini di terze parti e da siti partner che offrono le loro funzionalità tra le pagine del sito.</p>
+              <h2>Cookie e servizi di terze parti</h2>
+              <p>Alla data dell&apos;ultimo aggiornamento della presente Policy, il Sito non incorpora servizi di terze parti che installino automaticamente cookie non necessari nel dispositivo dell&apos;utente.</p>
+              <p>Eventuali servizi esterni che dovessero essere introdotti in futuro saranno valutati sulla base delle loro caratteristiche tecniche e, qualora richiedano il consenso dell&apos;utente, resteranno disattivati fino all&apos;acquisizione di tale consenso.</p>
             </section>
 
             <section id="social">
-              <h2>Social plugin</h2>
-              <p>In particolare, il sito presenta social plugin per Facebook e Twitter ma può essere previsto di usare anche quelli per Instagram, LinkedIn o altre piattaforme. Tali plugin non impostano un cookie, ma se esso è già presente sul computer del visitatore sono in grado di leggerlo ed utilizzarlo secondo le sue impostazioni. La raccolta e l’uso delle informazioni da parte di tali terzi sono regolati dalle rispettive informative privacy alle quali si prega di fare riferimento.</p>
+              <h2>Social network e collegamenti esterni</h2>
+              <p>Il Sito contiene collegamenti verso servizi e piattaforme esterne, tra cui:</p>
               <ul>
-                <li>Facebook informativa: <a className={styles.externalLink} href="https://www.facebook.com/policy/cookies/" target="_blank" rel="noreferrer">https://www.facebook.com/policy/cookies/</a></li>
-                <li>Facebook (configurazione): accedere al proprio account. Sezione privacy.</li>
-                <li>Twitter informative: <a className={styles.externalLink} href="https://support.twitter.com/articles/20170514" target="_blank" rel="noreferrer">https://support.twitter.com/articles/20170514</a></li>
-                <li>Twitter (configurazione): <a className={styles.externalLink} href="https://twitter.com/settings/security" target="_blank" rel="noreferrer">https://twitter.com/settings/security</a></li>
-                <li>Linkedin (cookie policy): <a className={styles.externalLink} href="https://www.linkedin.com/legal/cookie-policy?_l=it_IT" target="_blank" rel="noreferrer">https://www.linkedin.com/legal/cookie-policy?_l=it_IT</a></li>
-                <li>Instagram (cookie policy): <a className={styles.externalLink} href="https://help.instagram.com/1896641480634370?ref=ig" target="_blank" rel="noreferrer">https://help.instagram.com/1896641480634370?ref=ig</a> o <a className={styles.externalLink} href="https://www.facebook.com/help/instagram/1896641480634370" target="_blank" rel="noreferrer">https://www.facebook.com/help/instagram/1896641480634370</a></li>
+                <li>Facebook;</li>
+                <li>Instagram;</li>
+                <li>WhatsApp;</li>
+                <li>YouTube.</li>
               </ul>
+              <p>Tali elementi sono semplici collegamenti verso siti esterni e non costituiscono, allo stato attuale, social plugin incorporati nelle pagine del Sito.</p>
+              <p>La presenza del collegamento non comporta di per sé l&apos;installazione sul dispositivo dell&apos;utente di cookie provenienti da tali piattaforme.</p>
+              <p>Quando l&apos;utente decide di utilizzare uno di questi collegamenti, viene indirizzato verso il sito o l&apos;applicazione del relativo soggetto terzo. A partire da quel momento il trattamento dei dati e l&apos;eventuale utilizzo di cookie sono disciplinati dalle condizioni e dalle informative privacy e cookie del soggetto terzo interessato.</p>
+              <p>Si invita pertanto l&apos;utente a consultare le informative delle rispettive piattaforme prima di utilizzarne i servizi.</p>
             </section>
 
-            <section id="browser">
-              <h2>Installazione / disinstallazione cookie</h2>
-              <h3>Opzioni del browser</h3>
-              <p>L’utente può opporsi alla registrazione dei cookies sul proprio dispositivo configurando il browser usato per la navigazione. Se procede nella navigazione del sito dopo l’avviso di uso di cookie, se utilizza il sito senza cambiare le impostazioni del browser, si presuppone che intende ricevere tutti i cookies usati dal sito e fruire di tutte le funzionalità. Si ricorda che l’utente può impedire l’utilizzo di alcuni o di tutti i cookie sopra descritti, configurando il browser usato per la navigazione, e precisamente:</p>
-              <ul>
-                <li>Per Internet Explorer™: clicca qui</li>
-                <li>Per Safari™ Safari su iPhone, iPad, o iPod touch: clicca qui</li>
-                <li>Per Chrome™: clicca qui</li>
-                <li>Per Firefox™: clicca qui</li>
-                <li>Per Opera™: clicca qui</li>
-              </ul>
+            <section id="google-fonts">
+              <h2>Google Fonts</h2>
+              <p>Il Sito utilizza caratteri tipografici appartenenti alla libreria Google Fonts attraverso il sistema di gestione dei font previsto dal framework utilizzato dal Sito.</p>
+              <p>I file dei caratteri vengono ospitati e distribuiti direttamente insieme alle risorse del Sito e non vengono richiesti dal browser dell&apos;utente ai server di Google durante la normale navigazione.</p>
+              <p>Pertanto, l&apos;utilizzo dei caratteri tipografici del Sito non comporta l&apos;installazione di cookie Google Fonts né, attraverso tale funzionalità, una connessione del browser dell&apos;utente verso Google.</p>
             </section>
 
-            <section id="come-utilizziamo">
+            <section id="elenco-cookie">
               <h2>Come e quali cookie utilizziamo</h2>
-              <p>Nome, Tipologia, Scopo e descrizione dei cookie</p>
+              <p>Alla data dell&apos;ultimo aggiornamento, il Sito utilizza la seguente categoria di cookie.</p>
 
-              <h3>Cookie Sito — Cookie di Navigazione</h3>
-              <p>I cookie hanno la funzione esclusiva di riconoscimento degli utenti loggati permettendo la navigazione del sito anche nelle aree riservate. (Website cookies)</p>
+              <h3>Cookie di gestione delle preferenze</h3>
+              <p><strong>Nome:</strong> <code>ef_cookie_consent</code></p>
+              <p><strong>Tipologia:</strong> cookie tecnico di prima parte</p>
+              <p><strong>Finalità:</strong> memorizzare le preferenze dell&apos;utente relative all&apos;utilizzo dei cookie e degli eventuali strumenti di tracciamento</p>
+              <p><strong>Base dell&apos;utilizzo:</strong> necessario per ricordare le preferenze espresse dall&apos;utente</p>
+              <p><strong>Durata:</strong> fino a circa 6 mesi</p>
+              <p><strong>Profilazione:</strong> no</p>
+              <p><strong>Trasmissione a terzi:</strong> no</p>
+              <p>Eventuali ulteriori cookie tecnici generati per esigenze strettamente necessarie al funzionamento del Sito potranno essere utilizzati senza finalità di profilazione o marketing.</p>
+              <p>L&apos;elenco sarà aggiornato qualora vengano introdotti nuovi cookie o strumenti che richiedano specifica informazione o consenso.</p>
+            </section>
 
-              <h3>Cookie di Performance</h3>
-              <p>I cookie hanno la funzione di salvare informazioni sui fogli di stile inline per velocizzare le visite successive dell’utente e offrire una navigazione più rapida e meno costosa.</p>
-
-              <h3>Google Fonts — Cookie di terze parti</h3>
-              <p>Il Sito utilizza in alcune parti del sito dei font dal servizio Google Fonts. Per informazioni sui cookie in questione visitare il link <a className={styles.externalLink} href="https://www.google.it/intl/it/policies/privacy/" target="_blank" rel="noreferrer">https://www.google.it/intl/it/policies/privacy/</a></p>
+            <section id="installazione">
+              <h2>Installazione e disinstallazione dei cookie</h2>
+              <h3>Impostazioni del browser</h3>
+              <p>Oltre agli strumenti messi a disposizione direttamente dal Sito, l&apos;utente può gestire, bloccare o cancellare i cookie attraverso le impostazioni del browser utilizzato.</p>
+              <p>La maggior parte dei browser permette di:</p>
+              <ul>
+                <li>verificare quali cookie sono presenti;</li>
+                <li>cancellare singoli cookie o tutti i cookie memorizzati;</li>
+                <li>bloccare i cookie provenienti da determinati siti;</li>
+                <li>bloccare cookie di terze parti;</li>
+                <li>impedire completamente la memorizzazione dei cookie;</li>
+                <li>cancellare automaticamente i cookie alla chiusura del browser.</li>
+              </ul>
+              <p>La disabilitazione dei cookie strettamente necessari può compromettere alcune funzionalità tecniche del Sito o impedire la corretta memorizzazione delle preferenze espresse dall&apos;utente.</p>
+              <p>Le modalità di gestione dei cookie dipendono dal browser utilizzato e possono essere consultate nella relativa documentazione ufficiale.</p>
             </section>
 
             <section id="controllo">
-              <h2>Come controllare i cookies?</h2>
-              <p>Potete controllare e/o verificare i cookie come volete. Per saperne di più, visitate <a className={styles.externalLink} href="https://aboutcookies.org" target="_blank" rel="noreferrer">https://aboutcookies.org</a></p>
-              <p>Potete cancellare i cookies già presenti nel computer e impostare quasi tutti i browser in modo da bloccarne l’installazione. Se scegliete questa opzione, dovrete però modificare manualmente alcune preferenze ogni volta che visitate il nostro sito ed è possibile che alcuni servizi o determinate funzioni non siano disponibili.</p>
+              <h2>Come controllare i cookie</h2>
+              <p>L&apos;utente può controllare le proprie preferenze relative ai cookie in qualsiasi momento tramite il comando <strong>GESTISCI COOKIE</strong> disponibile nel footer del Sito.</p>
+              <p>È inoltre possibile cancellare i cookie già presenti sul dispositivo utilizzando le funzionalità del browser.</p>
+              <p>La cancellazione del cookie contenente le preferenze relative al consenso può determinare la nuova visualizzazione del sistema di gestione delle preferenze al successivo accesso, poiché il Sito non sarà più in grado di conoscere la scelta precedentemente espressa.</p>
+              <p>Per ulteriori informazioni generali sui cookie è possibile consultare: <a className={styles.externalLink} href="https://www.aboutcookies.org/" target="_blank" rel="noreferrer">https://www.aboutcookies.org/</a></p>
+            </section>
 
-              <h3>Specificazioni</h3>
-              <p>La presente Policy è da intendersi come parte della nostra politica, procedure e sistemi volti ad assicurare la riservatezza e la protezione dei dati personali in conformità con il Reg. UE 2016/679 GDPR. Rivolgetevi ai recapiti alla voce Titolare del trattamento per ulteriori informazioni.</p>
+            <section id="privacy">
+              <h2>Privacy e trattamento dei dati personali</h2>
+              <p>L&apos;eventuale trattamento di dati personali connesso all&apos;utilizzo del Sito avviene nel rispetto del Regolamento (UE) 2016/679 (“GDPR”), del Codice in materia di protezione dei dati personali e della normativa applicabile.</p>
+              <p>Per maggiori informazioni sul Titolare del trattamento, sulle finalità del trattamento, sulle basi giuridiche e sui diritti degli interessati è possibile consultare la:</p>
+              <p><strong>Privacy &amp; GDPR Policy</strong></p>
+              <p>disponibile all&apos;indirizzo: <Link href="/legal/privacy">/legal/privacy</Link></p>
+            </section>
+
+            <section id="aggiornamenti">
+              <h2>Aggiornamenti della Cookie Policy</h2>
+              <p>La presente Cookie Policy può essere modificata o aggiornata, in particolare in caso di:</p>
+              <ul>
+                <li>introduzione di nuove funzionalità del Sito;</li>
+                <li>utilizzo di nuovi cookie o strumenti di tracciamento;</li>
+                <li>modifica dei servizi di terze parti;</li>
+                <li>cambiamenti normativi o regolamentari;</li>
+                <li>modifiche alle modalità di gestione del consenso.</li>
+              </ul>
+              <p>Qualora le modifiche incidano sulle categorie di cookie o sugli strumenti per i quali è richiesto il consenso, potrà essere richiesto all&apos;utente di esprimere nuovamente le proprie preferenze.</p>
+              <p>La versione aggiornata della Cookie Policy sarà pubblicata su questa pagina con indicazione della data dell&apos;ultimo aggiornamento.</p>
+            </section>
+
+            <section id="specificazioni">
+              <h2>Specificazioni</h2>
+              <p>La presente Cookie Policy costituisce parte integrante delle politiche e delle procedure adottate da Erra &amp; Ferrini Group per assicurare la riservatezza e la protezione dei dati personali in conformità al Regolamento (UE) 2016/679, al Codice in materia di protezione dei dati personali e alla normativa applicabile in materia di cookie e altri strumenti di tracciamento.</p>
+              <p>Per ulteriori informazioni è possibile utilizzare i recapiti indicati nella sezione relativa al <strong>Titolare del trattamento</strong> della Privacy &amp; GDPR Policy.</p>
             </section>
           </article>
         </div>
