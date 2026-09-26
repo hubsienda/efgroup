@@ -288,3 +288,37 @@
     transition: none;
   }
 }
+
+/* Madrid lightbox download action only. */
+.image-lightbox-download {
+  position: absolute;
+  z-index: 5;
+  left: 14px;
+  bottom: 14px;
+  min-height: 44px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 7px;
+  background: rgba(0, 0, 0, .66);
+  color: #fff;
+  font-family: var(--font-sans), sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.image-lightbox-download:hover {
+  color: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+}
+
+.image-lightbox-download:focus-visible {
+  outline: 3px solid var(--brand-yellow);
+  outline-offset: 3px;
+}
