@@ -4,7 +4,7 @@ import InternalPageHero from "@/components/InternalPageHero";
 import styles from "@/components/LegalPages.module.css";
 
 export const metadata: Metadata = {
-  title: "Legal",
+  title: "Legale",
   description: "Informazioni legali di Erra & Ferrini Group: privacy e GDPR, cookie policy, note legali e accessibilità.",
 };
 
@@ -36,7 +36,7 @@ export default function Page() {
     <>
       <InternalPageHero
         eyebrow="Erra & Ferrini Group"
-        title="Legal"
+        title="Legale"
         intro="In questa sezione sono disponibili le informazioni legali relative al sito web di Erra & Ferrini Group, al trattamento dei dati personali, all’utilizzo dei cookie e all’accessibilità dei servizi digitali."
       />
 

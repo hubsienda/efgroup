@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import CitrusNavigation from "@/components/CitrusNavigation";
+import ImageLightbox from "@/components/ImageLightbox";
+
+const madridGallery = [
+  {
+    src: "/banners/madrid2026.jpg",
+    alt: "Fruit Attraction 2026 Madrid — Erra & Ferrini Group, Stand C09 Padiglione 4",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,6 +23,21 @@ export default function Home() {
           </div>
           <div className="hero-nav-wrap">
             <CitrusNavigation />
+          </div>
+        </div>
+      </section>
+
+      {/* TEMPORARY: Fruit Attraction Madrid 2026 — remove after 8 October 2026 */}
+      <section className="madrid-event" aria-labelledby="madrid-event-title">
+        <div className="shell madrid-event-inner">
+          <div className="madrid-event-copy">
+            <p className="eyebrow">FRUIT ATTRACTION 2026</p>
+            <h2 id="madrid-event-title">Madrid, 6–8 ottobre</h2>
+            <p className="madrid-event-location">Stand C09 · Padiglione 4</p>
+            <p className="madrid-event-callout">Passaci a trovare!</p>
+          </div>
+          <div className="madrid-event-banner">
+            <ImageLightbox gallery={madridGallery} initialIndex={0} className="madrid-banner-media" />
           </div>
         </div>
       </section>

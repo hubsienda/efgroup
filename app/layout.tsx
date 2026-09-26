@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import "./refinements.css";
 import "./team-gallery.css";
+import "./event-footer.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it" className={`${display.variable} ${sans.variable}`}>
-      <body>
+      <body id="top">
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

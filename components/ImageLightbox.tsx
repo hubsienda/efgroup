@@ -22,6 +22,7 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
 
   const triggerImage = gallery[initialIndex];
   const activeImage = gallery[activeIndex];
+  const hasNavigation = gallery.length > 1;
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -57,12 +58,12 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
         aria-label={`Ingrandisci ${triggerImage.alt}`}
       >
         <img src={triggerImage.src} alt={triggerImage.alt} />
-        <span className="image-lightbox-hint" aria-hidden="true">Ingrandisci</span>
+        <span className="image-lightbox-hint" aria-hidden="true">+</span>
       </button>
 
       <dialog
         ref={dialogRef}
-        className="image-lightbox-dialog"
+        className={`image-lightbox-dialog${hasNavigation ? "" : " image-lightbox-dialog-single"}`}
         aria-label={`Galleria fotografica: ${activeImage.alt}`}
         onClose={() => {
           setOpen(false);
@@ -72,6 +73,7 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
           if (event.target === dialogRef.current) close();
         }}
         onKeyDown={(event) => {
+          if (!hasNavigation) return;
           if (event.key === "ArrowLeft") {
             event.preventDefault();
             previous();
@@ -85,9 +87,11 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
         <button type="button" className="image-lightbox-close" onClick={close} aria-label="Chiudi galleria">
           ×
         </button>
-        <button type="button" className="image-lightbox-nav image-lightbox-prev" onClick={previous} aria-label="Foto precedente">
-          ‹
-        </button>
+        {hasNavigation && (
+          <button type="button" className="image-lightbox-nav image-lightbox-prev" onClick={previous} aria-label="Foto precedente">
+            ‹
+          </button>
+        )}
         <div className="image-lightbox-stage" onClick={close}>
           <img
             src={activeImage.src}
@@ -96,13 +100,17 @@ export default function ImageLightbox({ gallery, initialIndex, className }: Imag
             onClick={(event) => event.stopPropagation()}
           />
         </div>
-        <button type="button" className="image-lightbox-nav image-lightbox-next" onClick={next} aria-label="Foto successiva">
-          ›
-        </button>
-        <div className="image-lightbox-caption" aria-live="polite">
-          <span>{activeImage.alt}</span>
-          <span>{activeIndex + 1} / {gallery.length}</span>
-        </div>
+        {hasNavigation && (
+          <button type="button" className="image-lightbox-nav image-lightbox-next" onClick={next} aria-label="Foto successiva">
+            ›
+          </button>
+        )}
+        {hasNavigation && (
+          <div className="image-lightbox-caption" aria-live="polite">
+            <span>{activeImage.alt}</span>
+            <span>{activeIndex + 1} / {gallery.length}</span>
+          </div>
+        )}
       </dialog>
     </>
   );
