@@ -343,25 +343,62 @@
 
 @media (max-width: 480px) {
   .cookie-banner {
-    padding: 10px;
+    padding: 8px 10px;
   }
 
   .cookie-banner-inner {
-    padding: 14px 34px 14px 4px;
+    gap: 10px;
+    padding: 10px 32px 10px 4px;
   }
 
   .cookie-banner-copy h2 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+  }
+
+  .cookie-banner-copy > p {
+    margin-top: 7px;
+    font-size: .78rem;
+    line-height: 1.4;
+  }
+
+  .cookie-banner-copy .cookie-banner-note {
+    font-size: .72rem;
+  }
+
+  .cookie-banner-links {
+    margin-top: 7px;
+    gap: 14px;
+  }
+
+  .cookie-banner-links a {
+    font-size: .7rem;
   }
 
   .cookie-banner-actions,
   .cookie-preferences-actions {
     flex-direction: column;
+    gap: 6px;
+  }
+
+  .cookie-banner-actions .cookie-action,
+  .cookie-preferences-actions .cookie-action {
+    flex: none;
   }
 
   .cookie-action {
     width: 100%;
-    min-height: 48px;
+    min-height: 42px;
+    padding: 8px 12px;
+    font-size: .64rem;
+    line-height: 1.2;
+  }
+
+  .cookie-banner-close {
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
   }
 
   .cookie-preferences-dialog {
